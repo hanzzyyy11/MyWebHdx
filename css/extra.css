@@ -1,3 +1,8 @@
+@font-face{
+font-family:'Minecraft';
+src:url('../fonts/Minecraftia-Regular.ttf') format('truetype');
+}
+
 .extra{
   font-family:'Minecraft', monospace;
   padding:20px 15px;
