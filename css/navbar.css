@@ -90,37 +90,6 @@ pointer-events:none;
 
 .floating-text{
   font-family:'Minecraft', monospace;
-  font-size:1px;
-  position: relative;
-  margin:0;
-  line-height:1.1;
-
-  color: #00ff88; /* dasar hijau */
-  -webkit-text-stroke: 0.3px rgba(255,255,255,0.6);
-
-  /* Glow pulsating (optional) */
-  text-shadow:
-    0 0 5px rgba(0,255,120,0.3),
-    0 0 10px rgba(0,255,120,0.2);
-
-  /* Kilap efek */
-  background: linear-gradient(
-    90deg,
-    #00ff88 0%,
-    #ffffff 20%,   /* kilap putih bergerak */
-    #00ff88 80%,
-    #00ff88 100%
-  );
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  animation: shineMove 3s linear infinite, glowBlink 1.5s ease-in-out infinite;
-}
-/* LOGO */
-
-.floating-text{
-  font-family:'Minecraft', monospace;
   font-size:13px;
 
   color: #00ff88; /* dasar hijau */
