@@ -74,6 +74,14 @@ transition:0.2s;
 background:rgba(255,255,255,0.1);
 }
 
+.nav-logo {
+margin-left:auton
+
+.nav-logo img{
+height:36px;
+pointer-events: none;
+}
+
 .floating-text{
   font-family:'Minecraft', monospace;
   font-size:1px;
@@ -104,11 +112,6 @@ background:rgba(255,255,255,0.1);
   animation: shineMove 3s linear infinite, glowBlink 1.5s ease-in-out infinite;
 }
 /* LOGO */
-
-.logo img{
-height:36px;
-pointer-events: none;
-}
 
 .floating-text{
   font-family:'Minecraft', monospace;
