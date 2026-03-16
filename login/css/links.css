@@ -1,0 +1,15 @@
+.links {
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.links a {
+    color: #00ff88;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}

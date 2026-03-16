@@ -1,0 +1,75 @@
+/* container tetap di tengah */
+.container {
+    width:360px;
+    padding:25px;
+    background: rgba(120,120,120,0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:10px;
+    box-sizing:border-box;
+}
+
+/* TOP HEADER FIXED */
+.top-header {
+    position:fixed;
+    top:10px;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+    z-index:1000;
+}
+
+.top-header .logo {
+    width:40px;
+    height:auto;
+}
+
+.top-header .signup-link {
+    color:#00ff88;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.top-header .signup-link:hover {
+    text-decoration:underline;
+}
+
+/* Judul container */
+h2 {
+    text-align:center;
+    margin-bottom:20px;
+
+  color: #00ff88; /* dasar hijau */
+  -webkit-text-stroke: 0.3px rgba(255,255,255,0.6);
+
+  /* Glow pulsating (optional) */
+  text-shadow:
+    0 0 5px rgba(0,255,120,0.3),
+    0 0 10px rgba(0,255,120,0.2);
+
+  background: linear-gradient(
+    90deg,
+    #00ff88 0%,
+    #ffffff 20%,   
+    #00ff88 80%,
+    #00ff88 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shineMove 3s linear infinite, glowBlink 1.5s ease-in-out infinite;
+}
+
+@keyframes shineMove{
+  0%{
+    background-position: 0% 0%;
+  }
+  100%{
+    background-position: 200% 0%;
+  }
+}

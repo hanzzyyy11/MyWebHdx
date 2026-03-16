@@ -1,0 +1,126 @@
+/* Divider neon shine */
+.divider {
+    width: 100%;
+    height: 2px;
+    margin: 15px 0;
+    background: linear-gradient(90deg, #00ff88 0%, #ffffff 20%, #00ff88 80%, #00ff88 100%);
+    background-size: 200% 100%;
+    animation: shineMove 3s linear infinite;
+    border-radius: 2px;
+}
+
+@keyframes shineMove {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Container social buttons */
+.social-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Base button style */
+.social-btn button {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    font-family:'Minecraftia', monospace;
+    font-weight:bold;
+    color:white;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+/* Icon ukuran */
+.social-btn img {
+    width:20px;
+    height:20px;
+}
+
+/* ===============================
+   Google Button (sementara non-clickable)
+================================= */
+.google {
+    position: relative;
+    padding: 10px 20px;
+    background: rgba(120,120,120,0.08);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:8px;
+    color:white;
+    font-family:'Minecraftia', monospace;
+    font-weight:bold;
+    text-align:center;
+    pointer-events: none; /* sengaja non-clickable */
+}
+
+/* Garis coret di tengah */
+.google::after {
+    content:"";
+    position: absolute;
+    top: 50%;    
+    left: 10px; 
+    right: 10px;   
+    height: 2px;   
+    background: red; /* ganti sesuai neon theme #00ff88 */
+    transform: translateY(-50%);
+}
+
+/* ===============================
+   Facebook Button (sementara non-clickable)
+================================= */
+.facebook {
+    position: relative;
+    padding: 10px 20px;
+    background: rgba(120,120,120,0.08);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:8px;
+    color:white;
+    font-family:'Minecraftia', monospace;
+    font-weight:bold;
+    text-align:center;
+    pointer-events: none; /* sengaja non-clickable */
+}
+
+/* Garis coret di tengah */
+.facebook::after {
+    content:"";
+    position: absolute;
+    top: 50%;    
+    left: 10px; 
+    right: 10px;   
+    height: 2px;   
+    background: red; /* ganti sesuai neon theme #00ff88 */
+    transform: translateY(-50%);
+}
+
+/* Hover efek sementara (masih terlihat walau pointer-events:none) */
+.social-btn button:hover {
+    filter: brightness(1.2);
+}
+
+/* ===============================
+   LOGIN BUTTON
+================================= */
+.login-btn {
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    font-family:'Minecraftia', monospace;
+    font-weight:bold;
+    background:#00ff88;
+    color:black;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.login-btn:hover {
+    filter:brightness(1.2);
+}
