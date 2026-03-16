@@ -89,22 +89,26 @@ pointer-events:none;
 }
 
 .floating-text{
-  font-family:'Minecraft', monospace;
-  font-size:13px;
+position:absolute;
+left:50%;
+transform:translateX(-50%);
 
-  color: #00ff88; /* dasar hijau */
+font-family:'Minecraft', monospace;
+font-size:13px;
 
-  /* Kilap efek */
-  background: linear-gradient(
-    90deg,
-    #00ff88 0%,
-    #ffffff 20%,   /* kilap putih bergerak */
-    #00ff88 80%,
-    #00ff88 100%
-  );
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+color:#00ff88;
 
-  animation: shineMove 3s linear infinite
+background:linear-gradient(
+90deg,
+#00ff88 0%,
+#ffffff 20%,
+#00ff88 80%,
+#00ff88 100%
+);
+
+background-size:200% 100%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:shineMove 3s linear infinite;
 }
