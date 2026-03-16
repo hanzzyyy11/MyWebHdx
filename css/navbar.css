@@ -74,12 +74,17 @@ transition:0.2s;
 background:rgba(255,255,255,0.1);
 }
 
-.nav-logo {
+.nav-logo{
 margin-left:auto;
+display:flex;
+align-items:center;
 }
 
-.nav-logo img {
-height:36px; 
+.nav-logo img{
+height:36px;
+width:auto;
+max-height:36px;
+object-fit:contain;
 pointer-events:none;
 }
 
