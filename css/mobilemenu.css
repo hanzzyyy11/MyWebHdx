@@ -1,0 +1,78 @@
+@font-face{
+font-family:'Minecraft';
+src:url('Minecraftia-Regular.ttf') format('truetype');
+}
+
+:root{
+  --nav-height:61px;
+}
+
+.mobile-menu{
+  position:fixed;
+  top:var(--nav-height);
+  left:0;
+  right:0;
+  bottom:0;
+  background:rgba(0,0,0,.85);
+  backdrop-filter:blur(10px);
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  padding:20px;
+  gap:10px;
+  transform:translateX(-100%);
+  transition:.35s;
+  z-index:999;
+  overflow-y:auto;
+}
+
+.mobile-menu.active{
+transform:translateX(0);
+}
+
+.mobile-menu a{
+  display:block;
+  width:100%;
+
+  box-sizing: border-box;
+  padding:10px 14px;
+
+  font-family:'Minecraft', monospace;
+  font-size:12px;
+  letter-spacing:1px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:8px;
+
+  text-decoration:none;
+  color:white;
+
+  transition:0.2s;
+}
+
+.menu-bottom{
+margin-top:auto;
+padding:25px;
+margin-bottom:80px;
+}
+
+.login-btn{
+  display:block;
+
+  background: rgba(120,120,120,0.08);
+  backdrop-filter: blur(8px);
+
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:10px;
+
+  color:white;
+  text-align:center;
+  padding:16px;
+
+  font-family:'Minecraft', monospace;
+  text-decoration:none;
+}

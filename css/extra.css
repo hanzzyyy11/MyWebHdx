@@ -1,0 +1,81 @@
+.extra{
+  font-family:'Minecraft', monospace;
+  padding:20px 15px;
+}
+
+/* hanya section pertama yang ada glass */
+.extra:first-of-type{
+  background: rgba(120,120,120,0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border:1px solid rgba(255,255,255,0.08);
+  border-bottom:none; /* supaya nyambung */
+  border-radius:10px 10px 0 0;
+}
+
+/* section tengah */
+.extra:not(:first-of-type):not(:last-of-type){
+  background: rgba(120,120,120,0.08);
+  border-left:1px solid rgba(255,255,255,0.08);
+  border-right:1px solid rgba(255,255,255,0.08);
+}
+
+/* section terakhir sebelum footer */
+.extra:last-of-type{
+  background: rgba(120,120,120,0.08);
+  border-left:1px solid rgba(255,255,255,0.08);
+  border-right:1px solid rgba(255,255,255,0.08);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  border-radius:0 0 10px 10px;
+}
+
+.extra h2{
+font-size:10px;
+margin-bottom:10px;
+display:flex;
+align-items:center;
+gap:8px;
+color: lime;
+}
+
+.extra p{
+  font-size: 5px;
+}
+
+.logo{
+width:20px;
+height:20px;
+}
+
+.icon{
+width:16px;
+margin-right:6px;
+vertical-align:middle;
+filter: brightness(0) invert(1);
+}
+
+.extra p{
+margin:6px 0;
+opacity:0.85;
+}
+
+.socials{
+margin-top:10px;
+filter: brightness(0) invert(1);
+}
+
+.socials img{
+width:34px;
+height:34px;
+padding:8px;
+margin-right:8px;
+border-radius:8px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineMove 3s linear infinite;
+pointer-events: none;
+cursor:pointer;
+}

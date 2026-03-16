@@ -1,0 +1,152 @@
+@font-face{
+font-family:'Minecraft';
+src:url('Minecraftia-Regular.ttf') format('truetype');
+}
+
+body{
+background:#0f0f0f;
+color:white;
+font-family:Arial;
+}
+
+body.menu-open{
+overflow:hidden;
+}
+
+/* HERO */
+
+.hero{
+  height: calc(100dvh - 68px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+  background: linear-gradient(#000, #3a2b00);
+  position:relative;
+
+  padding: 0; /* jangan 40px atas bawah */
+}
+
+.icon-bg{
+  margin-bottom:20px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.icon-bg img{
+  width:320px;
+  height:auto;
+  transition: transform 0.2s ease;
+}
+
+/* hover sedikit membesar */
+.icon-bg img:hover{
+  transform: scale(1.05);
+}
+
+/* glow hijau sementara */
+.icon-bg img.glow{
+  filter: drop-shadow(0 0 8px #00ff88)
+          drop-shadow(0 0 16px #00ff88)
+          drop-shadow(0 0 24px #00ff88);
+  animation: shake 0.35s linear;
+}
+
+/* getar */
+@keyframes shake{
+  0%{ transform: translate(0,0); }
+  25%{ transform: translate(-3px,3px); }
+  50%{ transform: translate(3px,-3px); }
+  75%{ transform: translate(-3px,-2px); }
+  100%{ transform: translate(0,0); }
+}
+
+.icon-bg::after{
+  content:'';
+  top:0; left:0;
+  width:100%; height:100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  -webkit-mask-image: url('logo.webp'); 
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  animation: shineLogo 3s linear infinite;
+}
+
+.title{
+  font-family:'Minecraft', monospace;
+  font-size:48px;
+  position: relative;
+  margin:0;
+  line-height:1.1;
+
+  color: #00ff88; /* dasar hijau */
+  -webkit-text-stroke: 0.3px rgba(255,255,255,0.6);
+
+  /* Glow pulsating (optional) */
+  text-shadow:
+    0 0 5px rgba(0,255,120,0.3),
+    0 0 10px rgba(0,255,120,0.2);
+
+  background: linear-gradient(
+    90deg,
+    #00ff88 0%,
+    #ffffff 20%,   
+    #00ff88 80%,
+    #00ff88 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shineMove 3s linear infinite, glowBlink 1.5s ease-in-out infinite;
+}
+
+@keyframes shineMove{
+  0%{
+    background-position: 0% 0%;
+  }
+  100%{
+    background-position: 200% 0%;
+  }
+}
+
+@keyframes glowBlink{
+  0%, 100%{
+    text-shadow:
+      0 0 5px rgba(0,255,120,0.3),
+      0 0 10px rgba(0,255,120,0.2);
+  }
+  50%{
+    text-shadow:
+      0 0 15px rgba(0,255,120,0.7),
+      0 0 30px rgba(0,255,120,0.5);
+  }
+}
+
+.desc-main{
+  font-size:20px;
+  opacity:0.85;
+  line-height:1.2;       
+  margin:2px 0 15px 0;     
+}
+.desc-hint{ font-size:16px; opacity:0.6; margin:0; }
+
+.market-btn{
+  display:inline-block;
+  border:2px solid #f3c623;   
+  color:#f3c623;
+  padding:8px 20px;            
+  font-size:18px;              
+  font-weight:bold;
+  border-radius:25px;         
+  text-decoration:none;
+  transition:0.2s;
+}
+
+.market-btn:hover{
+  background:#f3c623;
+  color:black;
+  transform: scale(1.05);   
+}

@@ -1,0 +1,133 @@
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0f0f0f;
+}
+
+.navbar{
+position:sticky;
+top:0;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:12px 20px;
+
+background:rgba(0,0,0,0.45);
+backdrop-filter:blur(10px);
+
+z-index:999;
+}
+
+.navbar-line{
+position:absolute;
+bottom:0;
+left:50%;
+
+height:1px;
+width:0%;
+
+background:#39ff14;
+
+transform:translateX(-50%);
+
+animation:lineGrow 1.2s ease forwards;
+
+border-radius:2px;
+}
+
+@keyframes lineGrow{
+
+0%{
+width:0%;
+}
+
+100%{
+width:100%;
+}
+
+}
+
+/* MENU */
+
+.menu-btn{
+width:36px;
+height:36px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+
+color:white;
+font-size:20px;
+
+cursor:pointer;
+
+border-radius:6px;
+transition:0.2s;
+}
+
+.menu-btn:hover{
+background:rgba(255,255,255,0.1);
+}
+
+.floating-text{
+  font-family:'Minecraft', monospace;
+  font-size:1px;
+  position: relative;
+  margin:0;
+  line-height:1.1;
+
+  color: #00ff88; /* dasar hijau */
+  -webkit-text-stroke: 0.3px rgba(255,255,255,0.6);
+
+  /* Glow pulsating (optional) */
+  text-shadow:
+    0 0 5px rgba(0,255,120,0.3),
+    0 0 10px rgba(0,255,120,0.2);
+
+  /* Kilap efek */
+  background: linear-gradient(
+    90deg,
+    #00ff88 0%,
+    #ffffff 20%,   /* kilap putih bergerak */
+    #00ff88 80%,
+    #00ff88 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shineMove 3s linear infinite, glowBlink 1.5s ease-in-out infinite;
+}
+/* LOGO */
+
+.logo img{
+height:36px;
+pointer-events: none;
+}
+
+.floating-text{
+  font-family:'Minecraft', monospace;
+  font-size:13px;
+
+  color: #00ff88; /* dasar hijau */
+
+  /* Kilap efek */
+  background: linear-gradient(
+    90deg,
+    #00ff88 0%,
+    #ffffff 20%,   /* kilap putih bergerak */
+    #00ff88 80%,
+    #00ff88 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shineMove 3s linear infinite
+}

@@ -1,0 +1,34 @@
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family:'Minecraft', monospace;
+  font-size:3.5px;
+  margin-top: auto;
+  padding: 20px 15px;
+
+  background: linear-gradient(
+    90deg,
+    #00ff88 0%,
+    #ffffff 20%,  
+    #00ff88 80%,
+    #00ff88 100%
+  );
+
+  border-top: 1px solid rgba(255,255,255,0.2);
+
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shineMove 3s linear infinite;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
+}
