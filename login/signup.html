@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up - LifeaSMP</title>
+
+<link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/inputs.css">
+<link rel="stylesheet" href="css/buttons.css">
+</head>
+<body>
+
+<div class="top-header">
+    <img src="https://files.catbox.moe/v2zxt2.webp" alt="LifeaSMP Logo" class="logo">
+    <a href="login.html" class="signup-link">Login</a>
+</div>
+
+<div class="container">
+    <h2>Create your Lifea account</h2>
+
+    <form action="api/signup.php" method="POST">
+        <div class="extra">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+
+        <div class="extra">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="extra">
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone">
+        </div>
+
+        <div class="extra">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="extra">
+            <label for="platform">Platform</label>
+            <select id="platform" name="platform" required>
+                <option value="Java">Java</option>
+                <option value="Bedrock">Bedrock</option>
+            </select>
+        </div>
+
+        <button type="submit" class="login-btn">Sign Up</button>
+    </form>
+</div>
+
+</body>
+</html>

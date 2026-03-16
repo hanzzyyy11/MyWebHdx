@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - LifeaSMP</title>
+
+<link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/inputs.css">
+<link rel="stylesheet" href="css/captcha.css">
+<link rel="stylesheet" href="css/links.css">
+</head>
+<body>
+
+<!-- HEADER FIXED -->
+<div class="top-header">
+    <img src="https://files.catbox.moe/v2zxt2.webp" alt="LifeaSMP Logo" class="logo">
+    <a href="signup.html" class="signup-link">Sign Up</a>
+</div>
+
+<!-- LOGIN CONTAINER -->
+<div class="container">
+    <h2>Log in to Lifea</h2>
+
+    <!-- Social login buttons -->
+    <div class="social-btn">
+        <button class="google">
+            <img src="https://files.catbox.moe/51hmkr.png" alt="Google Icon">
+            Continue with Google
+        </button>
+        <button class="facebook">
+            <img src="https://files.catbox.moe/qeqnwi.png" alt="Facebook Icon">
+            Continue with Facebook
+        </button>
+    </div>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Form login email/password + captcha -->
+    <form action="api/captcha.php" method="POST">
+        <div class="extra">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Example: lifeasmp@gmail.com" required>
+        </div>
+
+        <div class="extra">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Example: Admin123" required>
+        </div>
+
+        <div class="captcha">
+            <div class="h-captcha" data-sitekey="9ac27494-5c40-4b38-bce0-acccae440cb6"></div>
+        </div>
+
+        <button type="submit" class="login-btn">LOGIN</button>
+    </form>
+
+    <!-- Links tambahan -->
+    <div class="links">
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        <p><a href="#">Forgot your password?</a> | <a href="#">Forgot your email?</a></p>
+    </div>
+</div>
+
+<!-- Script hCaptcha -->
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+</body>
+</html>
