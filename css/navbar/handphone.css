@@ -1,8 +1,4 @@
-@media (max-width: 899px){
-
-.menu-btn{
-display:flex;
-}
+@media (max-width:899px){
 
 .nav-links{
 display:none;
