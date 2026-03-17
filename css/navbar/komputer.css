@@ -4,20 +4,27 @@
 display:flex;
 align-items:center;
 flex-wrap:nowrap;
+gap:25px;
 }
 
+/* sembunyikan tombol hp */
 .menu-btn{
 display:none;
 }
 
+/* urutan elemen */
+.nav-logo{ order:1; }
+.floating-text{ order:2; }
+.nav-links{ order:3; }
+
+/* menu */
 .nav-links{
 display:flex;
 gap:25px;
-margin-left:20px;
 white-space:nowrap;
 }
 
-/* LINK */
+/* style link */
 .navbar a{
 position:relative;
 text-decoration:none;
@@ -32,7 +39,7 @@ transition:background .25s ease;
 background:rgba(0,255,136,0.15);
 }
 
-/* garis */
+/* underline animasi */
 .navbar a::after{
 content:"";
 position:absolute;
@@ -45,20 +52,19 @@ transform:translateX(-50%);
 transition:width .25s ease;
 }
 
-/* animasi garis */
 .navbar a:hover::after{
 width:70%;
 }
 
+/* tulisan LIFEASMP */
 .floating-text{
 position:static;
 transform:none;
-margin-left:20px;
 }
 
-.nav-logo{
-position:static;
-margin-left:23px;
+/* logo kiri */
+.nav-logo img{
+height:32px;
 }
 
 }
