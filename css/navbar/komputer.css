@@ -18,6 +18,7 @@ margin-right:10px;
 }
 
 .floating-text{
+font-size:13px;
 order:2;
 position:static;
 transform:none;
