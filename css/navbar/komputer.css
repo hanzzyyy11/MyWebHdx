@@ -3,7 +3,7 @@
 .navbar{
 display:flex;
 align-items:center;
-flex-wrap:nowrap;
+justify-content:space-between; /* kiri - tengah - kanan */
 }
 
 /* sembunyikan tombol hp */
@@ -11,27 +11,28 @@ flex-wrap:nowrap;
 display:none;
 }
 
-/* logo + text tetap kiri */
+/* logo + text kiri */
 .nav-logo{
-order:1;
-margin-right:10px;
+display:flex;
+align-items:center;
+gap:8px;
 }
 
+/* text kecil */
 .floating-text{
 font-size:13px;
-order:2;
 position:static;
 transform:none;
 }
 
-/* navlink di tengah */
+/* navlink benar2 di tengah */
 .nav-links{
-order:3;
+position:absolute;
+left:50%;
+transform:translateX(-50%);
 display:flex;
 gap:25px;
 white-space:nowrap;
-margin-left:auto;
-margin-right:auto;
 }
 
 /* link style */
