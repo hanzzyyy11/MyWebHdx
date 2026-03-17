@@ -1,0 +1,18 @@
+.cursor-ball{
+position:fixed;
+top:0;
+left:0;
+
+width:14px;
+height:14px;
+
+background:#39ff14;
+border-radius:50%;
+
+pointer-events:none;
+transform:translate(-50%, -50%);
+
+transition:transform 0.05s linear;
+
+z-index:9999;
+}
