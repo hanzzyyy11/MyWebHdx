@@ -29,7 +29,8 @@ transition:background 0.25s ease, color 0.25s ease;
 
 /* background saat hover */
 .nav-links a:hover{
-background:rgba(0,255,136,0.15);
+background:rgba(0,255,136,0.12);
+box-shadow:0 0 10px rgba(0,255,136,0.25);
 }
 
 /* underline */
