@@ -4,7 +4,6 @@
 display:flex;
 align-items:center;
 flex-wrap:nowrap;
-gap:25px;
 }
 
 /* sembunyikan tombol hp */
@@ -12,19 +11,29 @@ gap:25px;
 display:none;
 }
 
-/* urutan elemen */
-.nav-logo{ order:1; }
-.floating-text{ order:2; }
-.nav-links{ order:3; }
+/* logo + text tetap kiri */
+.nav-logo{
+order:1;
+margin-right:10px;
+}
 
-/* menu */
+.floating-text{
+order:2;
+position:static;
+transform:none;
+}
+
+/* navlink di tengah */
 .nav-links{
+order:3;
 display:flex;
 gap:25px;
 white-space:nowrap;
+margin-left:auto;
+margin-right:auto;
 }
 
-/* style link */
+/* link style */
 .navbar a{
 position:relative;
 text-decoration:none;
@@ -34,12 +43,12 @@ border-radius:20px;
 transition:background .25s ease;
 }
 
-/* background hover */
+/* hover background */
 .navbar a:hover{
 background:rgba(0,255,136,0.15);
 }
 
-/* underline animasi */
+/* underline */
 .navbar a::after{
 content:"";
 position:absolute;
@@ -54,17 +63,6 @@ transition:width .25s ease;
 
 .navbar a:hover::after{
 width:70%;
-}
-
-/* tulisan LIFEASMP */
-.floating-text{
-position:static;
-transform:none;
-}
-
-/* logo kiri */
-.nav-logo img{
-height:32px;
 }
 
 }
