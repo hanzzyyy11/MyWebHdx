@@ -22,10 +22,17 @@ white-space:nowrap;
 position:relative;
 text-decoration:none;
 color:white;
-padding:4px 0;
+padding:6px 14px;
+border-radius:20px;
+transition:background 0.25s ease, color 0.25s ease;
 }
 
-/* garis animasi */
+/* background saat hover */
+.nav-links a:hover{
+background:rgba(0,255,136,0.15);
+}
+
+/* underline */
 .nav-links a::after{
 content:"";
 position:absolute;
@@ -38,7 +45,7 @@ transform:translateX(-50%);
 transition:width 0.25s ease;
 }
 
-/* saat hover */
+/* animasi garis */
 .nav-links a:hover::after{
 width:70%;
 }
