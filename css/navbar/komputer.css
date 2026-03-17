@@ -39,16 +39,15 @@ position:absolute;
 left:50%;
 transform:translateX(-50%);
 display:flex;
-gap:25px;
+gap:12px; /* sebelumnya 25px */
 white-space:nowrap;
 }
 
-/* link style */
 .nav-links a{
 position:relative;
 text-decoration:none;
 color:white;
-padding:6px 14px;
+padding:4px 8px; /* sebelumnya 6px 14px */
 border-radius:20px;
 transition:background .25s ease;
 }
